@@ -1,12 +1,29 @@
-h1 {
-  color: blue;
-  font-size: 70px;
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: solid black 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tweet {
   cursor: pointer;
-  height: 10rem;
+  height: 5rem;
   width: 30rem;
   background: orange;
   margin-bottom: 10px;
+  border-radius: 1rem;
+  padding: .5rem;
+  font-size: 20px;
+}
+
+.inputBox {
+  height: 1.5rem;
+  width: 12rem;
 }
