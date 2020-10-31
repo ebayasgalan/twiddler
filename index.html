@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="jquery.js"></script>
-    <script src="dataGenerator.js"></script>
-  </head>
-  <body>
-    <script>
 
-      $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
+<head>
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <script src="jquery.js"></script>
+  <script src="dataGenerator.js"></script>
+</head>
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
+<body>
+  <script>
 
-      });
+    $(document).ready(function () {
+      var $body = $('body');
+      var $temp = $('<input></input>');
+      const tweets = [];
+      $temp.attr("placeholder", "What's happening?");
+      $temp.appendTo($body);
+      // $body.html('<h1>Twiddler</h1>');
+      $body.css("background-color", "purple");
+      var index = streams.home.length - 1;
+      function userClicked(e) {
+        console.log(e.target);
+      }
+      while (index >= 0) {
+        var tweet = streams.home[index];
+        console.log(tweet);
+        var $tweet = $('<div></div>');
+        $tweet.text('@' + tweet.user + ': ' + tweet.message + ' created at: ' + tweet.created_at);
+        $tweet.addClass('tweet').appendTo($body).on('click', userClicked);
+        index -= 1;
+      }
+    });
 
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>

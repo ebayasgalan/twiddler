@@ -1,0 +1,12 @@
+h1 {
+  color: blue;
+  font-size: 70px;
+}
+
+.tweet {
+  cursor: pointer;
+  height: 10rem;
+  width: 30rem;
+  background: orange;
+  margin-bottom: 10px;
+}
