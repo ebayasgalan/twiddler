@@ -184,9 +184,3 @@ body {
   width: 100%;
   object-fit: cover;
 }
-
-.proPic {
-  height: 10px;
-  width: 30px;
-  border-radius: 1rem;
-}

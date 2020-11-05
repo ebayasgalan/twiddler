@@ -47,10 +47,10 @@
       // posts new tweet
       function tweet(e) {
         e.preventDefault();
-        const usernameInput = $usernameInput.val();
-        const messageInput = $messageInput.val();
+        const user = $usernameInput.val();
+        const message = $messageInput.val();
         var $tweet = $('<div class="tweet"></div>');
-        $tweet.html(`<div><span class="userName">${usernameInput}</span><span class="atUser"> @${usernameInput}</span><span class="postedTime"> ・${moment().fromNow()}</span><span class="messageLogo"><i class="fas fa-ellipsis-h"></i></span><span class="userMessage">${messageInput}</span></div>`).prependTo($posts);
+        $tweet.html(`<div><span class="userName">${user}</span><span class="atUser"> @${user}</span><span class="postedTime"> ・${moment().fromNow()}</span><span class="messageLogo"><i class="fas fa-ellipsis-h"></i></span><span class="userMessage">${message}</span></div>`).prependTo($posts);
       }
 
       // Displays user-only tweets
@@ -66,7 +66,7 @@
         for (let i = 0; i < userTweets.length; i++) {
           var msg = userTweets[i];
           var $userOnly = $('<div class="tweet"></div>').prependTo($posts);
-          $userOnly.html(`<div><span class="userName">@${msg.user}</span> <span class="postedTime"> ・${moment().fromNow()}</span>
+          $userOnly.html(`<div><span class="userName">@${msg.user}</span><span class="atUser"> @${msg.user}</span><span class="postedTime"> ・${moment().fromNow()}</span>
           <span class="userMessage">${msg.message}</span></div>`);
         }
       }
@@ -82,7 +82,7 @@
           const name = tweet.user;
           const time = tweet.created_at;
           const message = tweet.message;
-          var $tweet = $('<div class="tweet"></div>').on('click', userClicked);
+          var $tweet = $(`<div class="tweet"></div>`).on('click', userClicked);
           $tweet.html(`<div><span class="userName">${name}</span><span class="atUser"> @${name}</span><span class="postedTime"> ・${moment(time).fromNow()}</span><span class="messageLogo"><i class="fas fa-ellipsis-h"></i></span><span class="userMessage">${message}</span></div>`).prependTo($posts);
         }
       }
