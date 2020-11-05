@@ -1,29 +1,192 @@
-.top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  border: solid black 10px;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.wrapper {
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+.logo {
+  position: fixed;
+  top: 1rem;
+  left: 5rem;
+  font-size: 5rem;
+  color: rgba(29,161,242,1.00);
+}
+.logo:hover {
+  cursor: pointer;
+}
+.title {
+  border-bottom: solid rgb(230,236,240,1) 1px;
+  padding: 15px;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+.newPost {
+  height: 15rem;
+  width: 100%;
+  background: white;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.userName {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nameInput {
+  font-size: 1.3rem;
+  height: 2.4rem;
+  position: absolute;
+  top: 5rem;
+}
+
+.messageInput {
+  position: absolute;
+  top: 7.5rem;
+  height: 2.7rem;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.leftPart {
+  position: relative;
+  flex: 1;
+  border-right: solid rgb(230,236,240,1) 1px;
+}
+.middlePart {
+  background-color: rgb(230,236,240,1);
+  flex: 2;
+
+}
+.rightPart {
+  flex: 1;
+  background: #edeef3;
+  position: relative;
+  border-left: solid rgb(230,236,240,1) 1px;
 }
 
 .tweet {
+  position: relative;
   cursor: pointer;
-  height: 5rem;
-  width: 30rem;
-  background: orange;
-  margin-bottom: 10px;
-  border-radius: 1rem;
+  height: 7rem;
+  background: white;
   padding: .5rem;
+  font-size: 20px;
+  border-bottom: solid rgb(230,236,240,1) 1px;
+}
+
+.tweet:hover {
+  background: rgb(230,236,240,1);
+}
+
+.messageLogo {
+  position: absolute;
+  top: 1px;
+  right: .6rem;
   font-size: 20px;
 }
 
-.inputBox {
-  height: 1.5rem;
-  width: 12rem;
+.messageLogo:hover {
+  background: rgba(29,161,242,.4);
+  border-radius: 50%;
+}
+
+.atUser {
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.postedTime {
+  font-size: .9rem;
+  color: gray;
+}
+
+.userMessage {
+  position: absolute;
+  font-size: 22px;
+  top: 48px;
+  left: 1rem;
+}
+
+.links {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  font-size: 1.5rem;
+  color: rgba(29,161,242,1.00);;
+}
+
+.links li {
+  list-style: none;
+  margin-left: 1.2rem;
+}
+
+.postButton {
+  position: absolute;
+  right: 1.4rem;
+  bottom: 1rem;
+  background: rgba(29,161,242,1.00);
+  height: 3rem;
+  width: 6.5rem;
+  border-radius: 2rem;
+  font-size: 20px;
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: bold;
+  opacity: .7;
+}
+
+.sidebar {
+  position: fixed;
+  top: 5em;
+  left: 6rem;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 55px;
+}
+
+.sidebar li:hover {
+  color: rgba(29,161,242,1);
+  background: rgb(230,236,240,1);
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.sidebar li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.load {
+  position: relative;
+  top: 2rem;
+  height: 4rem;
+  width: 100%;
+  border-radius: 2rem;
+  background: rgba(29,161,242,1);;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.rightPicture {
+  top: 20px;
+  height: 800px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.proPic {
+  height: 10px;
+  width: 30px;
+  border-radius: 1rem;
 }
